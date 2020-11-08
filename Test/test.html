@@ -10,12 +10,15 @@
     <div id="mocha"></div>
     <div id="target"></div>
 
+    <!-- Mocha's browser support comes with Chai JS already scripted in -->
     <script src="https://unpkg.com/chai/chai.js"></script>
     <script src="https://unpkg.com/mocha/mocha.js"></script>
 
     <script class="mocha-init">
       mocha.setup('bdd');
       mocha.checkLeaks();
+      //Add in expect from Chai Assertion Library here so that we can use expect in our autocomplete.test.js file
+      const expect = chai.expect
     </script>
     <script src="../utils.js"></script>
     <script src="../autocomplete.js"></script>
